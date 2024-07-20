@@ -7,11 +7,12 @@ import MyModal from "./components/Modal/MyModal.jsx"
 function App() {
 
     const [modal, setModal] = useState(false)
-    const [clear1, setClear1] = useState("")
-    const [clear2, setClear2] = useState("")
+    const [mph, setMph] = useState(0)
+    const [startMiliage, setStartMiliage] = useState("")
+    const [endMiliage, setEndMiliage] = useState("")
 
     const handleClick = () => {
-      
+      setMph(endMiliage - startMiliage)
   
       setModal(true)
     }
@@ -19,21 +20,21 @@ function App() {
     return (
         <div className="App">
             <MyModal visible={modal} setVisible={setModal}>
-                <h1>drg</h1>
+                <h1>{mph}</h1>
             </MyModal>
             <MyInput
                 type="number"
                 min="0"
-                onChange={(e) => setClear1(e.target.value)}
-                value={clear1}
-                placeholder="Кол-во банок 1 рейс"
+                onChange={(e) => setStartMiliage(e.target.value)}
+                value={startMiliage}
+                placeholder="Введите пробег выезда"
             />
             <MyInput
                 type="number"
                 min="0"
-                onChange={(e) => setClear2(e.target.value)}
-                value={clear2}
-                placeholder="Кол-во банок 2 рейс"
+                onChange={(e) => setEndMiliage(e.target.value)}
+                value={endMiliage}
+                placeholder="Введите пробег вьезда"
             />
             <MyButton onClick={handleClick}>Посчитать</MyButton>
         </div>
