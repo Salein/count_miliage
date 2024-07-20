@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: center;
+    padding-top: 7%;
+}
+
+.neon-btn {
+    border: 1px solid greenyellow;
+    background-color: black;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px 20px;
+    transition: 0.2s;
+    margin-right: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px greenyellow;
+}
+
+.neon-btn--green {
+    color: wheat;
+}
+
+.neon-btn--green:hover {
+    background-color: #b9e769;
+    color: #fff;
+    border: 1px solid #b9e769;
+    box-shadow: 10px 10px 100px 6px #b9e769;
+}
