@@ -16,8 +16,7 @@ function App() {
     const track = 40
 
     const handleClick = () => {
-        setfuel(
-            ((endMiliage - startMiliage - track) * fuelUsage) / 100 + fuelTrack)
+        setfuel((Math.ceil((endMiliage - startMiliage - track) * fuelUsage) / 100 + fuelTrack) * 1 / 1)
         setMph(endMiliage - startMiliage)
         setModal(true)
     }
